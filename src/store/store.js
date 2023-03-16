@@ -1,3 +1,8 @@
-import { combineReducers } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
+import { massage } from "./reducers/massage_reducer";
 
-export const RootReducer = combineReducers({});
+export const store = configureStore({
+  reducer: {
+    massage,
+  },
+});
