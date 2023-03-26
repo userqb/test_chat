@@ -1,7 +1,14 @@
 import React from "react";
+import Moment from "react-moment";
 
 const Time = () => {
-  return <div>Time</div>;
+  const now = new Date();
+
+  return (
+    <div>
+      <div>{now}</div>
+    </div>
+  );
 };
 
 export default Time;

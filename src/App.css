@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.header_chats {
+  width: 300px;
+  border-right: 0px;
+}
+
+.chat_item {
+  width: 300px;
+  min-height: 600px;
+  border: 1px solid black;
+}
+
+.my_input {
+  float: right;
+  padding: 15px;
+}
+
+.inpt {
+  width: 900px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.chat {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+}

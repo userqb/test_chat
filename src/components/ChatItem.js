@@ -15,9 +15,17 @@ const ChatItem = () => {
   }, []);
 
   return (
-    <div>
+    <div className="chat_item">
       {items.map((item) => {
-        return <div>{item.username}</div>;
+        return (
+          <div className="chat">
+            <img style={{ width: "50px" }} src={item.img} />
+            <div>
+              <div>{item.username}</div>
+              <div>{item.massage}</div>
+            </div>
+          </div>
+        );
       })}
     </div>
   );
