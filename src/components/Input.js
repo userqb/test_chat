@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addMassage } from "../store/reducers/massage_reducer";
+import { addMassage } from "../store/reducers/message_reducer";
 
 const Input = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const Input = () => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <button onClick={sentMassage}>sent</button>
+      <button onClick={sentMassage}>Отправить</button>
     </div>
   );
 };

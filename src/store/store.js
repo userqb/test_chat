@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import massage from "./reducers/massage_reducer";
+import message from "./reducers/message_reducer";
 
 export const store = configureStore({
-  reducer: { massage },
+  reducer: { message },
 });

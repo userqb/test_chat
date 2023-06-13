@@ -11,7 +11,7 @@
   border-right: 0px;
 }
 
-.chat_item {
+.chat {
   width: 300px;
   min-height: 600px;
   border: 1px solid black;
@@ -28,8 +28,16 @@
   border-radius: 8px;
 }
 
-.chat {
+.chat_item {
   display: flex;
   justify-content: flex-start;
   padding: 5px;
+  cursor: pointer;
+}
+
+.my_message {
+  height: 25px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
 }

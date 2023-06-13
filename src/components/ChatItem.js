@@ -1,28 +1,29 @@
-import axios from "axios";
 import React from "react";
+import { fetchData } from "../api/ItemsData";
+import { useSelector } from "react-redux";
 
 const ChatItem = () => {
+  const { message } = useSelector(({ message }) => message);
+  // const [value, setValue] = React.useState("")
   const [items, getItems] = React.useState([]);
 
+  console.log(getItems);
+
   React.useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios.get(
-        "https://63ddeb47df83d549cea79db1.mockapi.io/chat_name"
-      );
-      getItems(result.data);
-    };
-    fetchData();
+    fetchData(getItems);
   }, []);
 
+  const changeChat = () => {};
+
   return (
-    <div className="chat_item">
+    <div className="chat">
       {items.map((item) => {
         return (
-          <div className="chat">
+          <div onClick={changeChat} className="chat_item">
             <img style={{ width: "50px" }} src={item.img} />
             <div>
               <div>{item.username}</div>
-              <div>{item.massage}</div>
+              <div>{message}</div>
             </div>
           </div>
         );
